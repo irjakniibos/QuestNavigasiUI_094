@@ -46,8 +46,8 @@ fun DataApp(
     }
 }
 
-fun cancelAndBackToFormulirku(navController: NavController){}
-@Composable
-fun TampilData(onBackBtnClick: () -> cancelAndBackToFormulirku) {
-    TODO("Not yet implemented")
+private fun cancelAndBackToFormulirku(
+    navController: NavController
+){
+    navController.popBackStack(Navigasi.Formulirku.name, inclusive = false)
 }
