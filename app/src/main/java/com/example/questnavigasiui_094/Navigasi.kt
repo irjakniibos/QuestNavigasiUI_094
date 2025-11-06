@@ -4,10 +4,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.questnavigasiui_094.view.FormIsian
 
 enum class Navigasi{
     Formulirku,
@@ -33,6 +35,19 @@ fun DataApp(
                     }
                 )
             }
+            composable ( route = Navigasi.Detail.name){
+                TampilData(
+                    onBackBtnClick = {
+                        cancelAndBackToFormulirku(navController)
+                    }
+                )
+            }
         }
     }
+}
+
+fun cancelAndBackToFormulirku(navController: NavController){}
+@Composable
+fun TampilData(onBackBtnClick: () -> cancelAndBackToFormulirku) {
+    TODO("Not yet implemented")
 }
